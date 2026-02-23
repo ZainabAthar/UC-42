@@ -1,0 +1,25 @@
+
+FORENSIC AUTHENTICATION REPORT
+==============================
+
+Generated: 2026-02-20 15:18:56
+
+AUTHENTICATION RESULTS
+======================
+Status: TAMPERED
+Tampering Score: 0.9978
+Confidence: 99.6%
+
+FORENSIC ANALYSIS
+=================
+Very low confidence in authenticity. Strong evidence of tampering detected. Image highly likely to be forged.
+
+TECHNICAL DETAILS
+=================
+Map Shape: (384, 256)
+Image Size: (384, 256)
+
+
+DISCLAIMER
+==========
+This report was automatically generated. Results should be reviewed by qualified experts.
