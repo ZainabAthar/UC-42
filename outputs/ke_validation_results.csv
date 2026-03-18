@@ -1,0 +1,9 @@
+file,label,verdict,score,correct,barcode,flags,warnings
+digital_bill.pdf,GENUINE,PASS,82,True,0400000091117,,"WARNING — required_keywords: ✗ Missing: ['K-Electric', 'CORRUPTION']"
+ke_bill_paid.jpeg,GENUINE,RESUBMIT,0,True,,Image resolution too low: 986x1600px — ✗ too low (986px < 1500px minimum) — barcode unreadable. Ask customer to upload original photo.; Please upload the original photo (not via WhatsApp) or submit the digital PDF from the K-Electric app.,
+ke_bill_paid1.jpg,GENUINE,PASS,84,True,0400000091117,,"WARNING — required_keywords: ✗ Missing: ['K-Electric', 'CORRUPTION']"
+New Document(1)_1.jpg,GENUINE,PASS,82,True,0400000091117,,"WARNING — required_keywords: ✗ Missing: ['K-Electric', 'CORRUPTION']"
+forged.jpg,FORGED,FAIL,52,True,0400000091117,CRITICAL — barcode_crosscheck: ✗ TAMPER DETECTED — amount SUSPICIOUS: found 111663 but barcode=11663 — digit likely added,"WARNING — required_keywords: ✗ Missing: ['K-Electric', 'CORRUPTION']"
+image (8).png,FORGED,RESUBMIT,0,True,,Image resolution too low: 251x378px — ✗ too low (251px < 1500px minimum) — barcode unreadable. Ask customer to upload original photo.; Please upload the original photo (not via WhatsApp) or submit the digital PDF from the K-Electric app.,
+New Document(3)_1.jpg,FORGED,RESUBMIT,0,True,,Image resolution too low: 1080x1597px — ✗ too low (1080px < 1500px minimum) — barcode unreadable. Ask customer to upload original photo.; Please upload the original photo (not via WhatsApp) or submit the digital PDF from the K-Electric app.,
+ss (1).jpg,FORGED,RESUBMIT,0,True,,Image resolution too low: 1080x1598px — ✗ too low (1080px < 1500px minimum) — barcode unreadable. Ask customer to upload original photo.; Please upload the original photo (not via WhatsApp) or submit the digital PDF from the K-Electric app.,

@@ -1,0 +1,327 @@
+[
+  {
+    "file": "digital_bill.pdf",
+    "label": "GENUINE pdf",
+    "total_risk": 15,
+    "verdict": "\ud83d\udfe2 PASS",
+    "tests": {
+      "arithmetic": {
+        "raw": {
+          "prev_reading": null,
+          "curr_reading": null,
+          "units_consumed": null,
+          "amount": 195.0,
+          "energy_charges": 83.48
+        },
+        "flags": [
+          "\u26a0\ufe0f  Could not extract readings (prev=None, curr=None, units=None)"
+        ],
+        "risk_score": 0
+      },
+      "ocr_confidence": {
+        "field_confidences": {
+          "name": {
+            "value": "CNIC No  Not Available . FED: STATE BANK",
+            "confidence": 0.475
+          },
+          "address": {
+            "value": null,
+            "confidence": 0.0
+          },
+          "account": {
+            "value": "Meter No. WT13721",
+            "confidence": 0.909
+          },
+          "amount": {
+            "value": "195 units",
+            "confidence": 0.987
+          }
+        },
+        "flags": [
+          "\u274c Low OCR confidence on 'name': 0.475 ('CNIC No  Not Available . FED: STATE BANK')",
+          "\u26a0\ufe0f  Field 'address' not found in OCR",
+          "\u2705 'account' confidence OK: 0.909",
+          "\u2705 'amount' confidence OK: 0.987"
+        ],
+        "risk_score": 15
+      },
+      "name_format": {
+        "flags": [
+          "\u2705 Name length OK: 40 chars",
+          "\u2705 Name has 8 words"
+        ],
+        "risk_score": 0,
+        "name_found": "CNIC No  Not Available . FED: STATE BANK"
+      },
+      "area": {
+        "flags": [
+          "\u26a0\ufe0f  Address not found for area check"
+        ],
+        "risk_score": 0,
+        "consumer_no": "Meter No. WT13721",
+        "address": null
+      }
+    }
+  },
+  {
+    "file": "ke_bill_paid1.jpg",
+    "label": "GENUINE photo",
+    "total_risk": 85,
+    "verdict": "\ud83d\udd34 REJECT",
+    "tests": {
+      "arithmetic": {
+        "raw": {
+          "prev_reading": null,
+          "curr_reading": null,
+          "units_consumed": null,
+          "amount": 486.89,
+          "energy_charges": null
+        },
+        "flags": [
+          "\u26a0\ufe0f  Could not extract readings (prev=None, curr=None, units=None)"
+        ],
+        "risk_score": 0
+      },
+      "ocr_confidence": {
+        "field_confidences": {
+          "name": {
+            "value": "6",
+            "confidence": 0.878
+          },
+          "address": {
+            "value": "meioron",
+            "confidence": 0.107
+          },
+          "account": {
+            "value": "0400000091117",
+            "confidence": 0.989
+          },
+          "amount": {
+            "value": "486.89",
+            "confidence": 0.99
+          }
+        },
+        "flags": [
+          "\u2705 'name' confidence OK: 0.878",
+          "\u274c Low OCR confidence on 'address': 0.107 ('meioron')",
+          "\u2705 'account' confidence OK: 0.989",
+          "\u2705 'amount' confidence OK: 0.990"
+        ],
+        "risk_score": 15
+      },
+      "name_format": {
+        "flags": [
+          "\u274c Name too short: '6'",
+          "\u274c Only one word in name: '6'",
+          "\u274c Name pattern fail \u2014 Contains digits: '6'",
+          "\u274c Name pattern fail \u2014 Single word only (suspicious): '6'"
+        ],
+        "risk_score": 40,
+        "name_found": "6"
+      },
+      "area": {
+        "flags": [
+          "\u274c Address 'meioron' doesn't match division '04' (expected areas: ['site', 'baldia', 'orangi'])"
+        ],
+        "risk_score": 30,
+        "consumer_no": "0400000091117",
+        "address": "meioron"
+      }
+    }
+  },
+  {
+    "file": "New Document(1)_1.jpg",
+    "label": "GENUINE scanned",
+    "total_risk": 40,
+    "verdict": "\ud83d\udfe1 MANUAL REVIEW",
+    "tests": {
+      "arithmetic": {
+        "raw": {
+          "prev_reading": null,
+          "curr_reading": null,
+          "units_consumed": null,
+          "amount": null,
+          "energy_charges": null
+        },
+        "flags": [
+          "\u26a0\ufe0f  Could not extract readings (prev=None, curr=None, units=None)"
+        ],
+        "risk_score": 0
+      },
+      "ocr_confidence": {
+        "field_confidences": {
+          "name": {
+            "value": "5 CNIC No: Not Available FED: STATE BANK",
+            "confidence": 0.331
+          },
+          "address": {
+            "value": null,
+            "confidence": 0.0
+          },
+          "account": {
+            "value": "Consumer No:: AL088258",
+            "confidence": 0.719
+          },
+          "amount": {
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "flags": [
+          "\u274c Low OCR confidence on 'name': 0.331 ('5 CNIC No: Not Available FED: STATE BANK')",
+          "\u26a0\ufe0f  Field 'address' not found in OCR",
+          "\u274c Low OCR confidence on 'account': 0.719 ('Consumer No:: AL088258')",
+          "\u26a0\ufe0f  Field 'amount' not found in OCR"
+        ],
+        "risk_score": 30
+      },
+      "name_format": {
+        "flags": [
+          "\u2705 Name length OK: 40 chars",
+          "\u2705 Name has 8 words",
+          "\u274c Name pattern fail \u2014 Contains digits: '5 CNIC No: Not Available FED: STATE BANK'"
+        ],
+        "risk_score": 10,
+        "name_found": "5 CNIC No: Not Available FED: STATE BANK"
+      },
+      "area": {
+        "flags": [
+          "\u26a0\ufe0f  Address not found for area check"
+        ],
+        "risk_score": 0,
+        "consumer_no": "Consumer No:: AL088258",
+        "address": null
+      }
+    }
+  },
+  {
+    "file": "forged2.jpg",
+    "label": "FORGED2 amount edit",
+    "total_risk": 55,
+    "verdict": "\ud83d\udfe1 MANUAL REVIEW",
+    "tests": {
+      "arithmetic": {
+        "raw": {
+          "prev_reading": null,
+          "curr_reading": null,
+          "units_consumed": null,
+          "amount": 11663.0,
+          "energy_charges": null
+        },
+        "flags": [
+          "\u26a0\ufe0f  Could not extract readings (prev=None, curr=None, units=None)"
+        ],
+        "risk_score": 0
+      },
+      "ocr_confidence": {
+        "field_confidences": {
+          "name": {
+            "value": "Accounl No, 0400000091117",
+            "confidence": 0.734
+          },
+          "address": {
+            "value": null,
+            "confidence": 0.0
+          },
+          "account": {
+            "value": "AL088258",
+            "confidence": 0.686
+          },
+          "amount": {
+            "value": "11,663",
+            "confidence": 0.762
+          }
+        },
+        "flags": [
+          "\u274c Low OCR confidence on 'name': 0.734 ('Accounl No, 0400000091117')",
+          "\u26a0\ufe0f  Field 'address' not found in OCR",
+          "\u274c Low OCR confidence on 'account': 0.686 ('AL088258')",
+          "\u274c Low OCR confidence on 'amount': 0.762 ('11,663')"
+        ],
+        "risk_score": 45
+      },
+      "name_format": {
+        "flags": [
+          "\u2705 Name length OK: 25 chars",
+          "\u2705 Name has 3 words",
+          "\u274c Name pattern fail \u2014 Contains digits: 'Accounl No, 0400000091117'"
+        ],
+        "risk_score": 10,
+        "name_found": "Accounl No, 0400000091117"
+      },
+      "area": {
+        "flags": [
+          "\u26a0\ufe0f  Address not found for area check"
+        ],
+        "risk_score": 0,
+        "consumer_no": "AL088258",
+        "address": null
+      }
+    }
+  },
+  {
+    "file": "forged.jpg",
+    "label": "FORGED",
+    "total_risk": 40,
+    "verdict": "\ud83d\udfe1 MANUAL REVIEW",
+    "tests": {
+      "arithmetic": {
+        "raw": {
+          "prev_reading": null,
+          "curr_reading": null,
+          "units_consumed": null,
+          "amount": null,
+          "energy_charges": null
+        },
+        "flags": [
+          "\u26a0\ufe0f  Could not extract readings (prev=None, curr=None, units=None)"
+        ],
+        "risk_score": 0
+      },
+      "ocr_confidence": {
+        "field_confidences": {
+          "name": {
+            "value": "6 CNIC No Not Available  FED: STATE BANK",
+            "confidence": 0.477
+          },
+          "address": {
+            "value": null,
+            "confidence": 0.0
+          },
+          "account": {
+            "value": "Consumer No:: AL088258",
+            "confidence": 0.701
+          },
+          "amount": {
+            "value": null,
+            "confidence": 0.0
+          }
+        },
+        "flags": [
+          "\u274c Low OCR confidence on 'name': 0.477 ('6 CNIC No Not Available  FED: STATE BANK')",
+          "\u26a0\ufe0f  Field 'address' not found in OCR",
+          "\u274c Low OCR confidence on 'account': 0.701 ('Consumer No:: AL088258')",
+          "\u26a0\ufe0f  Field 'amount' not found in OCR"
+        ],
+        "risk_score": 30
+      },
+      "name_format": {
+        "flags": [
+          "\u2705 Name length OK: 40 chars",
+          "\u2705 Name has 8 words",
+          "\u274c Name pattern fail \u2014 Contains digits: '6 CNIC No Not Available  FED: STATE BANK'"
+        ],
+        "risk_score": 10,
+        "name_found": "6 CNIC No Not Available  FED: STATE BANK"
+      },
+      "area": {
+        "flags": [
+          "\u26a0\ufe0f  Address not found for area check"
+        ],
+        "risk_score": 0,
+        "consumer_no": "Consumer No:: AL088258",
+        "address": null
+      }
+    }
+  }
+]
