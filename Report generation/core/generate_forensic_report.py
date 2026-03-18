@@ -54,6 +54,8 @@ except ImportError:
 try:
     import matplotlib.pyplot as plt
     import matplotlib.cm as cm
+    import matplotlib
+    matplotlib.use('Agg') # Fixes TclError in headless/test environments
     HAS_MATPLOTLIB = True
 except ImportError:
     HAS_MATPLOTLIB = False
@@ -562,63 +564,63 @@ including confidence level and recommendations."""
                 
                 story.append(Spacer(1, 0.35*inch))
             
-            # Localization Map
-            story.append(Paragraph("Tampering Localization Map", heading_style))
-            story.append(Paragraph(
-                "<font size='9'>Red areas indicate detected tampering, blue areas indicate authentic regions.</font>",
-                styles['Normal']
-            ))
-            story.append(Spacer(1, 0.15*inch))
+            # # Localization Map
+            # story.append(Paragraph("Tampering Localization Map", heading_style))
+            # story.append(Paragraph(
+            #     "<font size='9'>Red areas indicate detected tampering, blue areas indicate authentic regions.</font>",
+            #     styles['Normal']
+            # ))
+            # story.append(Spacer(1, 0.15*inch))
             
-            localization_path = self._create_heatmap_image(
-                self.analysis_results['map'],
-                output_file.replace('.pdf', '_localization.png'),
-                cmap='RdBu_r',
-                title='Tampering Localization Map'
-            )
+            # localization_path = self._create_heatmap_image(
+            #     self.analysis_results['map'],
+            #     output_file.replace('.pdf', '_localization.png'),
+            #     cmap='RdBu_r',
+            #     title='Tampering Localization Map'
+            # )
             
-            if localization_path and os.path.exists(localization_path):
-                loc_img_table = Table([[RLImage(localization_path, width=5.2*inch, height=4*inch)]], colWidths=[5.2*inch])
-                loc_img_table.setStyle(TableStyle([
-                    ('ALIGN', (0, 0), (0, 0), 'CENTER'),
-                    ('VALIGN', (0, 0), (0, 0), 'MIDDLE'),
-                    ('LEFTPADDING', (0, 0), (0, 0), 0),
-                    ('RIGHTPADDING', (0, 0), (0, 0), 0),
-                    ('TOPPADDING', (0, 0), (0, 0), 0),
-                    ('BOTTOMPADDING', (0, 0), (0, 0), 0),
-                ]))
-                story.append(loc_img_table)
+            # if localization_path and os.path.exists(localization_path):
+            #     loc_img_table = Table([[RLImage(localization_path, width=5.2*inch, height=4*inch)]], colWidths=[5.2*inch])
+            #     loc_img_table.setStyle(TableStyle([
+            #         ('ALIGN', (0, 0), (0, 0), 'CENTER'),
+            #         ('VALIGN', (0, 0), (0, 0), 'MIDDLE'),
+            #         ('LEFTPADDING', (0, 0), (0, 0), 0),
+            #         ('RIGHTPADDING', (0, 0), (0, 0), 0),
+            #         ('TOPPADDING', (0, 0), (0, 0), 0),
+            #         ('BOTTOMPADDING', (0, 0), (0, 0), 0),
+            #     ]))
+            #     story.append(loc_img_table)
             
-            story.append(Spacer(1, 0.35*inch))
+            # story.append(Spacer(1, 0.35*inch))
             
-            # Confidence Map
-            story.append(Paragraph("Confidence Map", heading_style))
-            story.append(Paragraph(
-                "<font size='9'>Darker areas indicate higher confidence in the tampering detection.</font>",
-                styles['Normal']
-            ))
-            story.append(Spacer(1, 0.15*inch))
+            # # Confidence Map
+            # story.append(Paragraph("Confidence Map", heading_style))
+            # story.append(Paragraph(
+            #     "<font size='9'>Darker areas indicate higher confidence in the tampering detection.</font>",
+            #     styles['Normal']
+            # ))
+            # story.append(Spacer(1, 0.15*inch))
             
-            confidence_path = self._create_heatmap_image(
-                self.analysis_results['conf'],
-                output_file.replace('.pdf', '_confidence.png'),
-                cmap='gray',
-                title='Confidence Map'
-            )
+            # confidence_path = self._create_heatmap_image(
+            #     self.analysis_results['conf'],
+            #     output_file.replace('.pdf', '_confidence.png'),
+            #     cmap='gray',
+            #     title='Confidence Map'
+            # )
             
-            if confidence_path and os.path.exists(confidence_path):
-                conf_img_table = Table([[RLImage(confidence_path, width=5.2*inch, height=4*inch)]], colWidths=[5.2*inch])
-                conf_img_table.setStyle(TableStyle([
-                    ('ALIGN', (0, 0), (0, 0), 'CENTER'),
-                    ('VALIGN', (0, 0), (0, 0), 'MIDDLE'),
-                    ('LEFTPADDING', (0, 0), (0, 0), 0),
-                    ('RIGHTPADDING', (0, 0), (0, 0), 0),
-                    ('TOPPADDING', (0, 0), (0, 0), 0),
-                    ('BOTTOMPADDING', (0, 0), (0, 0), 0),
-                ]))
-                story.append(conf_img_table)
+            # if confidence_path and os.path.exists(confidence_path):
+            #     conf_img_table = Table([[RLImage(confidence_path, width=5.2*inch, height=4*inch)]], colWidths=[5.2*inch])
+            #     conf_img_table.setStyle(TableStyle([
+            #         ('ALIGN', (0, 0), (0, 0), 'CENTER'),
+            #         ('VALIGN', (0, 0), (0, 0), 'MIDDLE'),
+            #         ('LEFTPADDING', (0, 0), (0, 0), 0),
+            #         ('RIGHTPADDING', (0, 0), (0, 0), 0),
+            #         ('TOPPADDING', (0, 0), (0, 0), 0),
+            #         ('BOTTOMPADDING', (0, 0), (0, 0), 0),
+            #     ]))
+            #     story.append(conf_img_table)
             
-            story.append(Spacer(1, 0.35*inch))
+            # story.append(Spacer(1, 0.35*inch))
             
             # Page break before technical details
             story.append(PageBreak())

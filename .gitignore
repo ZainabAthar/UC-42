@@ -1,3 +1,28 @@
-temp_ui/*
-*.pth
-*cache*
+# Environments
+.env
+
+# Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datasets and Models
+dataset/
+*.zip
+trained_models/
+training_plots/
+
+# UI and Temporary outputs
+temp_ui/
+UI_OUTPUT/
+*.npz
+*.log
+*visualization.png
+*confidence.png
+*localization.png
+*.temp.jpg
+
+# OS generated files
+.DS_Store
+Thumbs.db
