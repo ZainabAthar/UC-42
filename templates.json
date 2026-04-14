@@ -1,0 +1,12 @@
+{
+    "K-Electric": {
+        "address_block": [85, 25, 155, 475],
+        "customer_info": [15, 545, 145, 960],
+        "summary_boxes": [175, 25, 255, 975],
+        "billing_footer": [870, 25, 955, 975]
+    },
+    "WAPDA": {
+        "address_block": [150, 600, 300, 950],
+        "consumer_info": [50, 50, 200, 500]
+    }
+}
